@@ -8,7 +8,6 @@ public class CuentaCorriente extends Cuenta{
     @Override
     public boolean saca(double valor) {
         double comision = 0.2;
-        boolean saca = super.saca(valor + comision);
-        return saca;
+        return super.saca(valor + comision);
     }
 }

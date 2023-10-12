@@ -27,6 +27,10 @@ public class Cuenta {
             return false;
         }
     }
+    //metodo para poder transferir dinero de una cuenta a otra cuenta
+    // teniendo en cuenta que se debe ingresar tanto el valor, como el id de la
+    // cuenta a enviar
+
 
     public boolean transfiere(double valor, Cuenta destino) {
         if(this.saldo >= valor) {
