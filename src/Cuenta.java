@@ -1,6 +1,6 @@
-public class Cuenta {
+public abstract class Cuenta {
 
-    private double saldo;
+    protected double saldo;
     private int agencia = 1;
     private int numero;
     private Cliente titular = new Cliente();
@@ -15,9 +15,7 @@ public class Cuenta {
         Cuenta.total ++;
     }
 
-    public void deposita(double valor) {
-        this.saldo = this.saldo + valor;
-    }
+    public abstract void deposita(double valor);
 
     public boolean saca(double valor) {
         if(this.saldo >= valor) {
@@ -27,10 +25,6 @@ public class Cuenta {
             return false;
         }
     }
-    //metodo para poder transferir dinero de una cuenta a otra cuenta
-    // teniendo en cuenta que se debe ingresar tanto el valor, como el id de la
-    // cuenta a enviar
-
 
     public boolean transfiere(double valor, Cuenta destino) {
         if(this.saldo >= valor) {
