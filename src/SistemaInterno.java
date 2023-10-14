@@ -6,7 +6,7 @@ public class SistemaInterno {
             System.out.println("Inicio de login Exitoso ");
             return true;
         }else {
-            System.out.println("Error en login ");
+            System.out.println("Error en login, intente nuevamente  ");
             return false;
         }
     }
