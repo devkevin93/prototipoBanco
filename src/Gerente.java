@@ -1,13 +1,13 @@
-public class Gerente extends Funcionario{
-    private String clave;
-    public void setClave( String clave){
-        this.clave = clave;
+public class Gerente extends Funcionario implements Autenticable {
 
-    }
-    public boolean iniciarSesion(String clave){
-        return clave == "GerenteRoot";
-    }
     public double getBonificacion(){
         return super.getSalario();
     }
+
+    @Override
+    public void setClave(String clave) {
+
+    }
+
 }
+
